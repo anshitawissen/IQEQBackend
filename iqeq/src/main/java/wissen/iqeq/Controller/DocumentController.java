@@ -19,8 +19,8 @@ public class DocumentController {
     public DocumentController(DocumentService documentService) {
         this.documentService = documentService;
     }
-    @GetMapping("/download")
-    public ResponseEntity<List<Map<String, String>>> downloadExcel() {
+    @GetMapping("/download/{id}")
+    public ResponseEntity<List<Map<String, String>>> downloadExcel(@PathVariable String id) {
         try {
             InputStream inputStream = new ClassPathResource("sample.xlsx").getInputStream();
             List<Map<String, String>> jsonData = documentService.downloadExcel(inputStream);
