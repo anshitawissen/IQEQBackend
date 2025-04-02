@@ -4,4 +4,4 @@ services:
     env: docker
     plan: free
     region: oregon
-    dockerfilePath: Dockerfile
+    dockerfilePath: iqeq/Dockerfile
