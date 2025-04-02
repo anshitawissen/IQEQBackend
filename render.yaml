@@ -4,5 +4,5 @@ services:
     env: docker
     plan: free
     region: oregon
-    dockerfilePath: iqeq/Dockerfile
+    dockerfilePath: ./iqeq/Dockerfile
     autoDeploy: true
